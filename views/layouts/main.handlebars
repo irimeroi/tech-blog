@@ -1,4 +1,3 @@
-{{!-- home page
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +6,16 @@
     <title>Tech Blog</title>
 </head>
 <body>
-    <header>
+    {{!-- <header>
         <h1>The Tech Blog</h1>
-    </header>
+    </header> --}}
     <nav>
+        {{!-- <a href="/">Dashboard</a> --}}
+        <a href="/login">Login</a>
+        <a href="/logout">Logout</a>
         <a href="/">Home</a>
-        <a href="/">Dashboard</a>
-        <a href="/">Login</a>
-        <a href="/">Logout</a>
+        <a href="/dashboard">Dashboard</a>
     </nav>
-    <div>
-        {{{body}}}
-    </div>
+    {{{body}}}
 </body>
-</html> --}}
+</html>

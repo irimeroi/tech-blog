@@ -3,6 +3,8 @@ const session =require('express-session');
 const logger = require('morgan');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const { engine } = require('express-handlebars');
+const path = require('path');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -27,17 +29,19 @@ const sess = {
     })
 };
 
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
+
 //attaches req.session
 app.use(session(sess));
 app.use(logger('dev'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
-
-// app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => { console.log(`Server listening on: http://localhost:${PORT}`) });
