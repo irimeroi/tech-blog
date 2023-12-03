@@ -16,7 +16,7 @@ document.querySelector('#signup').addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/');
     } else {
         console.error('Something went wrong!')
     }
@@ -39,7 +39,7 @@ document.querySelector('#login').addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/');
     } else {
         console.error('Something went wrong!')
     }
