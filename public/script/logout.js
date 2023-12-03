@@ -1,4 +1,4 @@
-document.querySelector('#logout').addEventListener('click', async () => {
+document.querySelector('#logout-button').addEventListener('click', async () => {
 
     const response = await fetch('/api/users/logout', {
         method: 'POST',

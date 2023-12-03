@@ -1,11 +1,10 @@
 const express = require('express');
 const session =require('express-session');
-const logger = require('morgan');
+// const logger = require('morgan');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-const { engine } = require('express-handlebars');
+const expresshbs = require('express-handlebars');
 const path = require('path');
-
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -29,13 +28,14 @@ const sess = {
     })
 };
 
-app.engine('handlebars', engine());
+const handlebars = expresshbs.create({ helpers });
+app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
 //attaches req.session
 app.use(session(sess));
-app.use(logger('dev'));
+// app.use(logger('dev'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
