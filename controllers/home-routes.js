@@ -58,7 +58,7 @@ router.get('/post/:id', async (req, res) => {
 router.get('/login', async (req, res) => {
     // if user is loggedin, it redirects them to home page
     if (req.session.loggedIn) {
-        res.redirect('/home');
+        res.redirect('/home ');
         return;
     }
     // otherwise it redirects to login page
