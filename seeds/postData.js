@@ -12,6 +12,13 @@ const postData = [
         "date": "10/23/23",
         "description": "Hello World2",
         "user_id": 2,
+    },
+    ,
+    {
+        "title": "The Impact of Artificial Intelligence on the Job Market: Navigating the Future",
+        "date": "10/23/23",
+        "description": "Hello World2",
+        "user_id": 0,
     }
 ];
 
