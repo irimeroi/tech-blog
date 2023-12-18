@@ -1,5 +1,16 @@
-<h1>HOMEPAGE</h1>
+<h1>Welcome to the Tech Blog!</h1>
 
 {{#each posts}}
 {{> post-partial}}
+
+{{!-- {{#each comments}}
+<div class="comment-box">
+    <p class="commenter">{{user.username}}</p>
+    <p class="date">{{format_date date}}</p>
+    <p class="comment">{{description}}</p>
+</div>
+{{/each}} --}}
+
 {{/each}}
+
+<script src="/js/newPost.js"></script>
