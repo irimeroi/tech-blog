@@ -1,10 +1,26 @@
+{{!-- <nav><a href="/new-post">New Post</a></nav> --}}
+
 <h1>These are all the posts you created!</h1>
 
-<button id="new-post">New Post</button>
 {{#each posts}}
 {{> post-partial}}
 {{!-- <button id="{{id}}" class="edit-button">Edit</button> --}}
-{{!-- <button id="{{id}}" class="delete-button">Delete</button> --}}
+<button id="{{id}}" class="delete-button">Delete</button>
 {{/each}}
 
-<script src="./js/deletePost.js"></script>
+<h1>Or create a new post here!</h1>
+<form id="new-post-form">
+    <div>
+        <label for="title">Title</label>
+        <input id="title" type="text">
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <input id="description" type="text">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<script src="/js/newPost.js"></script>
+<script src="/js/deletePost.js"></script>
+{{!-- <script src="/js/editPost.js"></script> --}}
