@@ -40,4 +40,12 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.get('/edit/:id', async (req, res) => {
+    const postData = await Post.findByPk(req.params.id, {
+        include: [{ model: User }]
+    });
+    console.log(postData)
+    res.render('edit-post', {id: postData.dataValues.id});
+})
+
 module.exports = router;

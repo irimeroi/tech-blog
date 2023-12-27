@@ -1,5 +1,5 @@
-{{!-- <h1>Edit post</h1>
-<form id="edit-post-form">
+<h1>Edit post</h1>
+<form id="edit-post-form" data-id="{{id}}">
     <div>
         <label for="title">Title</label>
         <input id="title" type="text">
@@ -8,7 +8,7 @@
         <label for="description">Description</label>
         <input id="description" type="text">
     </div>
-    <button type="submit">Edit Post</button>
+    <button id="{{id}}" type="submit">Edit Post</button>
 </form>
 
-<script src="/js/editPost.js"></script> --}}
+<script src="/js/editPost.js"></script>

@@ -4,8 +4,9 @@
 
 {{#each posts}}
 {{> post-partial}}
-{{!-- <button id="{{id}}" class="edit-button">Edit</button> --}}
+<button id="{{id}}" class="edit-button"><a href="/dashboard/edit/{{id}}">Edit</a></button>
 <button id="{{id}}" class="delete-button">Delete</button>
+{{!-- <button id="{{id}}" class="comment-button">Add a comment</button> --}}
 {{/each}}
 
 <h1>Or create a new post here!</h1>
@@ -23,4 +24,4 @@
 
 <script src="/js/newPost.js"></script>
 <script src="/js/deletePost.js"></script>
-{{!-- <script src="/js/editPost.js"></script> --}}
+<script src="/js/editPost.js"></script>
