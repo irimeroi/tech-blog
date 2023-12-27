@@ -21,7 +21,7 @@ router.get('/new-post', async (req, res) => {
 router.put('/:id', async (req, res) => {
     try {
         const post = await Post.update(
-            req.body,
+            {...req.body, user_id: req.session.user_id},
             {
                 where: {
                     id: req.params.id,

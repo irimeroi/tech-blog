@@ -3,14 +3,18 @@
 {{#each posts}}
 {{> post-partial}}
 
-{{!-- {{#each comments}}
-<div class="comment-box">
-    <p class="commenter">{{user.username}}</p>
-    <p class="date">{{format_date date}}</p>
-    <p class="comment">{{description}}</p>
-</div>
-{{/each}} --}}
+<input type="hidden" id="post_id" value="{{id}}" />
+<textarea id="comment-textarea" data-description="{{id}}"></textarea>
+<button id="{{id}}" class="comment-button">Submit</button>
 
+{{#each comments}}
+<div class="comment-box">
+        <p class="commenter">{{user.username}}</p>
+        <p class="date">{{format_date date}}</p>
+        <p class="comment">{{description}}</p>
+</div>
+{{/each}}
 {{/each}}
 
 <script src="/js/newPost.js"></script>
+<script src="/js/comments.js"></script>
