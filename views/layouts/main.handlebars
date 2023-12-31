@@ -10,18 +10,21 @@
 </head>
 
 <body>
-    {{!-- <header>
+    <header>
         <h1>The Tech Blog</h1>
-    </header> --}}
-    <nav>
-        <a href="/">Home</a>
-        {{#if loggedIn }}
-        <a href="/dashboard">Dashboard</a>
-        <a id="logout" href="#">Logout</a>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-    </nav>
+        <nav>
+            <ul>
+            <li><a href="/">Home</a></li>
+            {{#if loggedIn }}
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/dashboard/new-post" class="new-post-button">+ New Post</a></li>
+            <li><a id="logout" href="#">Logout</a></li>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            {{/if}}
+            </ul>
+        </nav>
+    </header>
     <main>
         {{{body}}}
     </main>

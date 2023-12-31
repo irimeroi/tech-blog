@@ -14,8 +14,9 @@ Comment.init(
         date: {
             type: DataTypes.DATE,
             allowNull: false,
+            defaultValue: DataTypes.NOW
         },
-        description: {
+        commenttext: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -25,13 +26,21 @@ Comment.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        post_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'post',
+                key: 'id'
+            }
         }
     }, {
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'comment'
-    }
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'comment'
+}
 );
 
 module.exports = Comment;

@@ -14,10 +14,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.get('/new-post', async (req, res) => {
-    res.render('new-post');
-});
-
 router.put('/:id', async (req, res) => {
     try {
         const post = await Post.update(
