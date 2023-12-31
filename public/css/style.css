@@ -1,3 +1,89 @@
 * {
     margin: dotted red;
 }
+
+header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1b89bc;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#each-post {
+    margin: 20px;
+  }
+
+#new-post-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1b89bc;
+}
+
+#edit-post-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1b89bc;
+}
+
+#signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1b89bc;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1b89bc;
+}
+
+#title {
+    height: 50px;
+    width: 500px;
+}
+#description {
+    height: 300px;
+    width: 500px;
+}
+
+.delete-button {
+    color: #1b89bc;
+}

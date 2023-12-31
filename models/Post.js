@@ -21,7 +21,7 @@ Post.init(
             defaultValue: DataTypes.NOW
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         user_id: {

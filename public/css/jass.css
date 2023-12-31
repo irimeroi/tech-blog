@@ -230,6 +230,7 @@
    */
   textarea {
     overflow: auto;
+    width: 100%;
   }
   /**
    * 1. Add the correct box sizing in IE 10.
