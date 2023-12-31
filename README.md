@@ -3,7 +3,7 @@
 For this project I created a blog where users can share their thoughts and opinions about tech. It also allows other users to comment on the posts already created.
 
 ## Link
-https://github.com/irimeroi/tech-blog/actions/runs/7372878686
+[https://github.com/irimeroi/tech-blog/actions/runs/7372878686](https://irimeroi.github.io/tech-blog/)
 
 ## Screenshots
 ![](./public/screenshots/Screenshot%202023-12-31%20at%2012.52.05 PM.png)
